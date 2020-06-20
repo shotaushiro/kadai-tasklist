@@ -1,4 +1,4 @@
-<% if logged_in? %>
+<%# if logged_in? %>
 
   <p>ログイン完了ユーザ: 
 <%= current_user.name %>
@@ -7,7 +7,11 @@
 <ul>
 <% @tasks.each do |task| %>
 <li>
-<%= link_to task.id, task %> : <%= task.status %>&gt;<%= task.content %>
+<%= link_to task.id, task %>
+:
+<%= task.status %>
+ &gt;
+<%= task.content %>
 </li>
 <% end %>
 </ul>
@@ -19,4 +23,4 @@
 
 <%# redirect_to 'tasks#index' %>
 
-<% end %>
+<%# end %>
